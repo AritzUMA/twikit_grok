@@ -19,6 +19,6 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     license='MIT',
-    url='https://github.com/d60/twikit_grok',
+    url='https://github.com/AritzUMA/twikit_grok',
     package_data={'twikit_grok': ['py.typed']}
 )
