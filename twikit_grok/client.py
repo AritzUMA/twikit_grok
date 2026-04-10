@@ -87,9 +87,9 @@ class Client(twikit.Client):
             timeout=None
         ) as response:
             self._remove_duplicate_ct0_cookie()
-            async for chunk in response.aiter_bytes():
+            async for chunk in response.aiter_lines():
                 try:
-                    yield json.loads(chunk.decode())
+                    yield json.loads(chunk)
                 except (UnicodeDecodeError, json.JSONDecodeError):
                     pass
 
